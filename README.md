@@ -26,3 +26,4 @@ A good way to figure out what is going on here when things are different or conf
 
 - [Don't use cssBundleHref](https://remix.run/docs/en/main/guides/vite#remove-remix-runcss-bundle)
 - [Add ?url to css imports](https://remix.run/docs/en/main/guides/vite#fix-up-css-imports-referenced-in-links)
+- [Layout and children explained](https://remix.run/docs/en/main/file-conventions/root#layout-export)
