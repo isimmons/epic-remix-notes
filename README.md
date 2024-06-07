@@ -15,3 +15,14 @@ Following each lesson in the Epic Web Foundations Workshop, I will add only what
    in the links function.
 
 From here, Just follow the lessons. Research each topic. Information is provided in detail in the lessons, the links in the lessons, and in the Remix docs. Make changes as nessessary.
+
+New Remix apps use Vite instead of the classic Remix Bundler. This will mean that some things in the workshop are not needed any more or may need to be modified.
+
+For example now you can just directly import the global.css file and not worry about using cssBundleHref. In fact cssBundleHref is not included in a new app and the docs for it will point you to the Remix/Vite docs.
+
+A good way to figure out what is going on here when things are different or confusing is to refer to the [Migration Docs](https://remix.run/docs/en/main/guides/vite#migrating) for what changes.
+
+## Notable Changes
+
+- [Don't use cssBundleHref](https://remix.run/docs/en/main/guides/vite#remove-remix-runcss-bundle)
+- [Add ?url to css imports](https://remix.run/docs/en/main/guides/vite#fix-up-css-imports-referenced-in-links)

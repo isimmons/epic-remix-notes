@@ -8,5 +8,5 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <p>Hello World</p>;
+  return <p className="p-8 text-xl">Hello World</p>;
 }
