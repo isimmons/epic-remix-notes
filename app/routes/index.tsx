@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -32,6 +33,8 @@ export default function Index() {
         Started with create-remix and built up to match the Epicweb Workshop
         app.
       </p>
+
+      <Link to="users/kody">Kodi</Link>
     </div>
   );
 }

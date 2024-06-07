@@ -1,6 +1,7 @@
 import os from "node:os";
 import { json, type LinksFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   Meta,
   Outlet,
@@ -39,20 +40,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="flex h-full flex-col justify-between bg-background text-foreground">
         <header className="container mx-auto py-6">
           <nav className="flex justify-between">
-            <div>
+            <Link to="/">
               <div className="font-light">epic</div>
               <div className="font-bold">notes</div>
-            </div>
+            </Link>
           </nav>
         </header>
 
         <div className="flex-1">{children}</div>
 
         <div className="container mx-auto flex justify-between">
-          <div>
+          <Link to="/">
             <div className="font-light">epic</div>
             <div className="font-bold">notes</div>
-          </div>
+          </Link>
           <p>Built with ♥️ by {data.username}</p>
         </div>
 
