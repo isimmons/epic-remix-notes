@@ -1,4 +1,4 @@
-import { Link, useParams } from "@remix-run/react";
+import { Link, useParams } from '@remix-run/react';
 
 export default function KodyProfileRoute() {
   const params = useParams();

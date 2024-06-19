@@ -1,5 +1,5 @@
-import { Link, NavLink, Outlet, useParams } from "@remix-run/react";
-import { cn } from "~/utils/misc";
+import { Link, NavLink, Outlet, useParams } from '@remix-run/react';
+import { cn } from '~/utils/misc';
 
 export default function NotesRoute() {
   const params = useParams();
@@ -18,7 +18,7 @@ export default function NotesRoute() {
             <NavLink
               to="some-note-id"
               className={({ isActive }) =>
-                cn("underline", isActive && "bg-accent")
+                cn('underline', isActive && 'bg-accent')
               }
             >
               Some Note

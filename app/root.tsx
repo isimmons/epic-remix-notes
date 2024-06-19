@@ -1,5 +1,4 @@
-import os from "node:os";
-import { json, type LinksFunction } from "@remix-run/node";
+import { json, type LinksFunction } from '@remix-run/node';
 import {
   Link,
   Links,
@@ -8,18 +7,19 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-} from "@remix-run/react";
+} from '@remix-run/react';
+import os from 'node:os';
 
-import stylesheet from "~/tailwind.css?url";
-import fontStyleSheet from "~/styles/font.css?url";
-import faviconAssetUrl from "~/assets/favicon.svg";
+import faviconAssetUrl from '~/assets/favicon.svg';
+import fontStyleSheet from '~/styles/font.css?url';
+import stylesheet from '~/tailwind.css?url';
 
-import "~/styles/global.css";
+import '~/styles/global.css';
 
 export const links: LinksFunction = () => [
-  { rel: "icon", type: "image/svg+xml", href: faviconAssetUrl },
-  { rel: "stylesheet", href: stylesheet },
-  { rel: "stylesheet", href: fontStyleSheet },
+  { rel: 'icon', type: 'image/svg+xml', href: faviconAssetUrl },
+  { rel: 'stylesheet', href: stylesheet },
+  { rel: 'stylesheet', href: fontStyleSheet },
 ];
 
 export async function loader() {
@@ -51,7 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </nav>
           </header>
 
-          <div className="flex-1 container">{children}</div>
+          <div className="container flex-1">{children}</div>
 
           <div className="container mx-auto flex justify-between">
             <Link to="/">
