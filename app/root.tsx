@@ -37,24 +37,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full flex-col justify-between bg-background text-foreground">
-        <header className="container mx-auto py-6">
-          <nav className="flex justify-between">
+      <body className="h-full">
+        <div
+          id="content"
+          className="flex h-full flex-col justify-between bg-background text-foreground"
+        >
+          <header className="container mx-auto py-6">
+            <nav className="flex justify-between">
+              <Link to="/">
+                <div className="font-light">epic</div>
+                <div className="font-bold">notes</div>
+              </Link>
+            </nav>
+          </header>
+
+          <div className="flex-1 container">{children}</div>
+
+          <div className="container mx-auto flex justify-between">
             <Link to="/">
               <div className="font-light">epic</div>
               <div className="font-bold">notes</div>
             </Link>
-          </nav>
-        </header>
-
-        <div className="flex-1">{children}</div>
-
-        <div className="container mx-auto flex justify-between">
-          <Link to="/">
-            <div className="font-light">epic</div>
-            <div className="font-bold">notes</div>
-          </Link>
-          <p>Built with ♥️ by {data.username}</p>
+            <p>Built with ♥️ by {data.username}</p>
+          </div>
         </div>
 
         <ScrollRestoration />
