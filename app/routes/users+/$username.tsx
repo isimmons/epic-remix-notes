@@ -29,7 +29,7 @@ export default function userProfileRoute() {
   const { user } = useLoaderData<typeof loader>();
 
   return (
-    <div className="mt-36 border-4 border-green-500">
+    <div className="mt-36">
       <h1 className="text-h1">{user.name ?? user.username}</h1>
       <Link to="notes">Notes</Link>
     </div>
