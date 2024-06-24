@@ -1,5 +1,5 @@
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
-import { Link, useLoaderData, useParams } from '@remix-run/react';
+import { Link, useLoaderData } from '@remix-run/react';
 import { db } from '~/utils/db.server';
 import { invariantResponse } from '~/utils/misc';
 
@@ -25,7 +25,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   });
 };
 
-export default function userProfileRoute() {
+export default function UserProfileRoute() {
   const { user } = useLoaderData<typeof loader>();
 
   return (

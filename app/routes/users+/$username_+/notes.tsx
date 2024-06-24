@@ -1,13 +1,7 @@
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLoaderData,
-  useParams,
-} from '@remix-run/react';
-import { cn, invariantResponse } from '~/utils/misc';
-import { db } from '~/utils/db.server';
 import { json, type LoaderFunctionArgs } from '@remix-run/node';
+import { Link, NavLink, Outlet, useLoaderData } from '@remix-run/react';
+import { db } from '~/utils/db.server';
+import { cn, invariantResponse } from '~/utils/misc';
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { username } = params;
@@ -48,7 +42,7 @@ export default function NotesRoute() {
           <div className="absolute inset-0 flex flex-col">
             <Link to=".." relative="path" className="pb-4 pl-8 pr-4 pt-12">
               <h1 className="text-base font-bold md:text-lg lg:text-left lg:text-2xl">
-                {owner.name ?? owner.username}'s Notes
+                {owner.name ?? owner.username}&apos;s Notes
               </h1>
             </Link>
             <ul className="overflow-y-auto overflow-x-hidden pb-12">
