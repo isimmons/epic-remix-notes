@@ -25,7 +25,7 @@ export function cn(...inputs: ClassValue[]) {
  * @throws {Response} if condition is falsey
  */
 export function invariantResponse(
-  condition: any,
+  condition: unknown,
   message?: string | (() => string),
   responseInit?: ResponseInit,
 ): asserts condition {
@@ -37,5 +37,23 @@ export function invariantResponse(
           'An invariant failed, please provide a message to explain why.',
       { status: 400, ...responseInit },
     );
+  }
+}
+
+/**
+ * Check a value to see if it is not undefined or null
+ *
+ * @param value The value to check
+ *
+ * @example
+ * assertDefined(foo)
+ *
+ * @throws {Response} if the value is undefined or null
+ */
+export function assertDefined<Value>(
+  value: Value | null | undefined,
+): asserts value is Value {
+  if (value === undefined || value === null) {
+    throw new Response('Not found', { status: 404 });
   }
 }
