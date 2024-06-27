@@ -73,6 +73,7 @@ export default function NoteEdit() {
             name="content"
             id="content"
             defaultValue={data.note.content}
+            className='min-h-[400px]'
           />
         </div>
       </div>
